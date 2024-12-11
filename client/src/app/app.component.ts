@@ -1,19 +1,21 @@
 import {Component, inject, OnInit} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import {Router, RouterLink, RouterOutlet} from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import {AuthService} from './core/auth.service';
 import {User} from '@angular/fire/auth';
+import {MatAnchor, MatButton} from '@angular/material/button';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterLink],
+  imports: [CommonModule, RouterOutlet, RouterLink, MatAnchor, MatButton],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
   http = inject(HttpClient);
+  router = inject(Router);
   authService = inject(AuthService);
 
   ngOnInit(): void {
@@ -30,5 +32,6 @@ export class AppComponent implements OnInit {
 
   logout(): void {
     this.authService.logout();
+    this.router.navigateByUrl('/login');
   }
 }
