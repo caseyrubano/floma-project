@@ -2,7 +2,7 @@ export const environment = {
   production: false,
   apiUrl: 'http://localhost:5000',
   firebase: {
-    apiKey: "AIzaSyATj0gYQTMMFWDkaKKcijNbSbrt8HQzjsw",
+    apiKey: "",
     authDomain: "document-collaboration-e6135.firebaseapp.com",
     projectId: "document-collaboration-e6135",
     storageBucket: "document-collaboration-e6135.firebasestorage.app",
