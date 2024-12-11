@@ -1,0 +1,13 @@
+<div>
+
+  <form [formGroup]="form">
+    <input id="title" type="text" formControlName="title"/>
+    <br />
+    <br />
+    <textarea formControlName="body" rows="10" cols="100" placeholder="Body..."></textarea>
+  </form>
+
+  @if (displaySaved) {
+    <div>Saved</div>
+  }
+</div>
