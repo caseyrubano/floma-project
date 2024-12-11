@@ -1,0 +1,14 @@
+<div>
+  <h1>Document List</h1>
+
+  <form [formGroup]="form">
+    <input id="title" type="text" formControlName="title" placeholder="Document Title"/>
+    <button (click)="createDocument()">Create Document</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let document of documents$ | async">
+      <a [routerLink]="['../document/' + document.id]">{{document.title}}</a>
+    </li>
+  </ul>
+</div>
