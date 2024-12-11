@@ -1,13 +1,33 @@
 <div>
 
   <form [formGroup]="form">
-    <input id="title" type="text" formControlName="title"/>
+
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <mat-form-field>
+          <mat-label>Document Title</mat-label>
+          <input type="email" matInput formControlName="title" placeholder="Document Title" />
+        </mat-form-field>
+      </div>
+    </div>
+
     <br />
     <br />
-    <textarea formControlName="body" rows="10" cols="100" placeholder="Body..."></textarea>
+
+    <div class="row justify-content-center">
+      <div class="col-6">
+        <mat-form-field>
+          <mat-label>Document Title</mat-label>
+          <textarea type="email" matInput formControlName="body" placeholder="Body..." rows="10" cols="100"></textarea>
+        </mat-form-field>
+      </div>
+    </div>
   </form>
 
   @if (displaySaved) {
-    <div>Saved</div>
+    <div class="saved">
+      <mat-icon matListItemIcon class="icon">autorenew</mat-icon>
+      Saved
+    </div>
   }
 </div>

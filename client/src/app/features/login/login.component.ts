@@ -1,14 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import {FormBuilder, FormControl, ReactiveFormsModule, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import {AuthService} from '../../core/auth.service';
+import {MatButton} from '@angular/material/button';
+import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, MatButton, MatInput, MatLabel, MatFormField],
 })
 export class LoginComponent {
   fb = inject(FormBuilder);

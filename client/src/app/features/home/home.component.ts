@@ -5,6 +5,11 @@ import {Observable} from 'rxjs';
 import {DocumentService} from '../../core/document.service';
 import {DocumentInterface} from '../../core/document.interface';
 import {Router, RouterLink} from '@angular/router';
+import {MatListItem, MatListItemTitle, MatListOption, MatSelectionList} from '@angular/material/list';
+import {MatFormField, MatLabel} from '@angular/material/form-field';
+import {MatInput} from '@angular/material/input';
+import {MatIcon} from '@angular/material/icon';
+import {MatButton} from '@angular/material/button';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +21,16 @@ import {Router, RouterLink} from '@angular/router';
     NgIf,
     AsyncPipe,
     RouterLink,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatListOption,
+    MatSelectionList,
+    MatListItem,
+    MatFormField,
+    MatInput,
+    MatLabel,
+    MatIcon,
+    MatButton,
+    MatListItemTitle
   ],
   styleUrls: ['./home.component.css']
 })

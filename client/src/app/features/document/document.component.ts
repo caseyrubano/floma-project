@@ -5,6 +5,11 @@ import {debounceTime, Observable} from 'rxjs';
 import {DocumentService} from '../../core/document.service';
 import {DocumentInterface} from '../../core/document.interface';
 import {ActivatedRoute} from '@angular/router';
+import {MatButton} from '@angular/material/button';
+import {MatFormField, MatLabel} from '@angular/material/form-field';
+import {MatInput} from '@angular/material/input';
+import {MatIcon} from '@angular/material/icon';
+import {MatListItemIcon} from '@angular/material/list';
 
 @Component({
   selector: 'app-document',
@@ -15,7 +20,13 @@ import {ActivatedRoute} from '@angular/router';
     FormsModule,
     NgIf,
     AsyncPipe,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatButton,
+    MatFormField,
+    MatInput,
+    MatLabel,
+    MatIcon,
+    MatListItemIcon
   ],
   styleUrls: ['./document.component.css']
 })

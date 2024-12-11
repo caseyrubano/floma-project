@@ -7,6 +7,10 @@ mat-form-field {
   width: 100%;
 }
 
+mat-icon {
+  vertical-align: middle;
+}
+
 .mdc-text-field--filled:not(.mdc-text-field--disabled) {
  background-color: transparent !important;
 }

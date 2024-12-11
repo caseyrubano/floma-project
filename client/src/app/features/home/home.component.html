@@ -2,13 +2,32 @@
   <h1>Document List</h1>
 
   <form [formGroup]="form">
-    <input id="title" type="text" formControlName="title" placeholder="Document Title"/>
-    <button (click)="createDocument()">Create Document</button>
+    <div class="row justify-content-center">
+      <div class="col-3">
+        <mat-form-field>
+          <mat-label>Document Title</mat-label>
+          <input type="email" matInput formControlName="title" placeholder="Document Title" />
+        </mat-form-field>
+      </div>
+
+      <div class="col-2">
+        <button (click)="createDocument()" mat-flat-button>Create Document</button>
+      </div>
+    </div>
   </form>
 
-  <ul>
-    <li *ngFor="let document of documents$ | async">
-      <a [routerLink]="['../document/' + document.id]">{{document.title}}</a>
-    </li>
-  </ul>
+  <br />
+
+  <div class="row justify-content-md-center">
+    <div class="col-4" style="text-align: left">
+      <mat-selection-list #documents>
+        @for (document of documents$ | async; track document) {
+          <mat-list-item [routerLink]="['../document/' + document.id]">
+            <mat-icon matListItemIcon class="icon">description</mat-icon>
+            <div matListItemTitle>{{document.title}}</div>
+          </mat-list-item>
+        }
+      </mat-selection-list>
+    </div>
+  </div>
 </div>
